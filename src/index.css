@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #f8fafc;
+  --color-primary-container: #1e293b;
+  --color-action: #6366f1;
+  --color-surface: #0f172a;
+  --color-surface-container: rgba(255, 255, 255, 0.05);
+  --color-surface-container-low: rgba(0, 0, 0, 0.2);
+  --color-surface-container-high: rgba(255, 255, 255, 0.1);
+  --color-on-surface: #f1f5f9;
+  --color-on-surface-variant: #94a3b8;
+  
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --text-body-md: 1rem;
+  --text-body-lg: 1.125rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.frosted {
+  @apply backdrop-blur-2xl bg-black/20 border border-white/10;
+}
+
+.markdown-body {
+  @apply text-body-md leading-relaxed text-slate-300;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-display font-bold mt-6 mb-4 text-white;
+}
+
+.markdown-body strong {
+  @apply font-bold text-indigo-300;
+}
+
+.mesh-gradient {
+  background: fixed;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+}
